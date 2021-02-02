@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body{
+        width: 100%;
+        text-align: center;
+      }
+      .findARabbit{
+        background-color: tomato;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        margin: 16px 0;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      img{
+        display: block;
+        margin: auto;
+      }
+      .mainPage{
+        background-color: teal;
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        margin: 16px 0;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="findARabbit">Find a rabbit!🐰🐰🐰</button> 
+    <button class="mainPage">Move to main page!😀😃😆</button>
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="rabbit" src="./img/rabbit.png" alt="rabbit" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <img class="carrot" src="./img/carrot.png" alt="carrot" > 
+    <script>
+      const button = document.querySelector('.findARabbit');
+      const rabbit = document.querySelector('.rabbit');
+      button.addEventListener('click',()=>{
+        rabbit.scrollIntoView({behavior: 'smooth', block: 'center'});
+        console.log("hi")
+      })
+
+      const main = document.querySelector('.mainPage');
+      main.addEventListener('click',()=>{
+        window.scrollTo({
+          top:0,
+          behavior:"smooth"
+        })
+      })
+    </script>
+  </body>
+</html>
