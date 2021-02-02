@@ -3,6 +3,7 @@ const horizontal = document.querySelector('.horizontal');
 const target = document.querySelector('.target');
 const tag = document.querySelector('.tag');
 
+//사진이 로드 되기전 발생되는 현상 방지
 addEventListener('load',()=>{
     document.addEventListener('mousemove',(event)=>{
         const x = event.clientX;
@@ -12,7 +13,7 @@ addEventListener('load',()=>{
         const targetHalfHeight = targetRect.height/2;
     
         console.log(`${x} ${y}`);
-    
+        //성능 개선을 위해 left,top(layout 변경) -> tranform사용
         vertical.style.transform = `translateX(${x}px)`;
         horizontal.style.transform = `translateY(${y}px)`;
         // vertical.style.left = `${x}px`;
